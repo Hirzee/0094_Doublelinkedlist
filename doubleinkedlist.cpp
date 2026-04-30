@@ -110,3 +110,22 @@ public:
         delete current;
         cout << "Record with roll number " << rollNo << " deleted" << endl;
     }
+
+    void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+
+        cout << "Records in ascending order of roll number are:\n";
+        while (currentNode != NULL)
+        {
+            cout << currentNode->noMhs << " ";
+            currentNode = currentNode->next;
+        }
+        cout << endl;
+    }
